@@ -16,7 +16,7 @@ public class RobotCommandsParserTest {
 	@Test
 	void validateParse() {
 		Input input = mock(Input.class);
-		when(input.nextLine()).thenReturn("1 1 E", "RFRFRFRF", "3 2 N", "FRRFLLFFRRFLL");
+		when(input.nextLine()).thenReturn("1 1 E", "RFRFRFRF", "3 2 N", "FRRFLLFFRRFLL", null);
 		List<RobotCommand> robotCommands = RobotCommandsParser.parse(input);
 		assertEquals(2, robotCommands.size());
 	}

@@ -5,6 +5,7 @@ package com.guptaamit.martianrobots;
  *
  */
 public class Mars {
+	public static final int BOUNDARY_UPPER_LIMIT = 50;
 	private final int boundaryX;
 	private final int boundaryY;
 	private final boolean[][] lostScent;

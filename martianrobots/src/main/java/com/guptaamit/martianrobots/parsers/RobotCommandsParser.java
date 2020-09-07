@@ -31,7 +31,7 @@ public class RobotCommandsParser {
 		Optional<Position> startingPosition = getStartingPosition(input);
 		List<Instruction> instructions = getRobotInstructions(input);
 		if(startingPosition.isEmpty() || instructions.size()==0) {
-			Optional.empty();
+			return Optional.empty();
 		}
 		return Optional.of(new RobotCommand(startingPosition.get(), instructions));
 	}

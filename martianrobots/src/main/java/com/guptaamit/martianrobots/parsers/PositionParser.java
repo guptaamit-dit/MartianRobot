@@ -14,6 +14,9 @@ import com.guptaamit.martianrobots.Position;
 public class PositionParser {
 	public static final Position parse(String line) {
 		String[] parts = line.split(" ");
+		if(parts.length!=3) {
+			throw new IllegalArgumentException("Position Line format is incorrect.");
+		}
 		Coordinate coordinate = new Coordinate(Integer.parseInt(parts[0]), Integer.parseInt(parts[1]));
 		Orientation orientation = Orientation.of(parts[2]);
 		return new Position(coordinate, orientation);

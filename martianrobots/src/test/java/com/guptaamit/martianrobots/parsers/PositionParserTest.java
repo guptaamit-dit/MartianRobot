@@ -26,6 +26,13 @@ public class PositionParserTest {
 	}
 	
 	@Test
+	public void whenInvalidPositionFormatThenThrowException() {
+		assertThrows(IllegalArgumentException.class, () -> {
+			PositionParser.parse("23N");
+	    });
+	}
+	
+	@Test
 	public void validateParse() {
 		Position position = PositionParser.parse("2 3 N");
 		assertEquals(new Coordinate(2, 3), position.getCoordinate());
