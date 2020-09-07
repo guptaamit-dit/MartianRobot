@@ -26,7 +26,6 @@ public class FileInput implements Input {
 					.filter(line -> StringUtils.isNotBlank(line))
 					.collect(Collectors.toList());
 		}
-		System.out.println(lines);
 	}
 	@Override
 	public String nextLine() {

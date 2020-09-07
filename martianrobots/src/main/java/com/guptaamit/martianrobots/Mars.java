@@ -33,4 +33,13 @@ public class Mars {
 		return lostScent[coordinate.getX()][coordinate.getY()];
 	}
 	
+	/**
+	 * Determines if the coordinate is with in the boundary of Mars or not
+	 * @param coordinate
+	 * @return True if the coordinate is within boundary
+	 */
+	public boolean isWithinBoundary(Coordinate coordinate) {
+		return coordinate.getX() <= boundaryX && coordinate.getY() <= boundaryY;
+	}
+	
 }
